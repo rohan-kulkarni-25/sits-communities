@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar, Platform } from "react-native";
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import BottomTabNavigation from "./navigations/BottomTab";
+import useUserStore from "./store/user.store";
+import LoginScreen from "./screens/Login/Login";
 
-export default function App() {
+const height = Platform.OS == "android" ? StatusBar.currentHeight : 0;
+
+const App = () => {
+  const user = useUserStore((state) => state.user);
+  console.log(user.$createdAt);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{ flex: 1, marginTop: height }}>
+      {user.userId ? (
+        <NavigationContainer>
+          <BottomTabNavigation />
+        </NavigationContainer>
+      ) : (
+        <LoginScreen />
+      )}
+    </SafeAreaView>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
