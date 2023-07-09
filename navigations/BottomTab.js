@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import CommunitiesScreen from "../screens/Communities/CommuntiesScreen";
 import StackNavigation from "./Stack";
+import ProfileScreen from "../screens/Profile/ProfiieScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -23,22 +24,6 @@ const EventsScreen = () => {
   );
 };
 
-const ProfileScreen = () => {
-  return (
-    <View
-      style={{
-        backgroundColor: "white",
-        flex: 1,
-        justifyContent: "center",
-        alignContent: "center",
-      }}
-    >
-      <Text style={{ textAlign: "center", fontSize: 18, color: "gray" }}>
-        comming very soon !
-      </Text>
-    </View>
-  );
-};
 
 const BottomTabNavigation = () => {
   return (
