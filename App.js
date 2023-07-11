@@ -9,10 +9,9 @@ const height = Platform.OS == "android" ? StatusBar.currentHeight : 0;
 
 const App = () => {
   const user = useUserStore((state) => state.user);
-  console.log(user.$createdAt);
   return (
     <SafeAreaView style={{ flex: 1, marginTop: height }}>
-      {user.userId ? (
+      {user.user !== undefined ? (
         <NavigationContainer>
           <BottomTabNavigation />
         </NavigationContainer>

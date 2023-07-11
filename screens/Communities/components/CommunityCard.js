@@ -30,11 +30,11 @@ const CommunityCard = ({ data }) => {
       >
         <Image
           style={{ width: 60, height: 60, borderRadius: 10 }}
-          source={{ uri: data.imguri }}
+          source={{ uri: data.photoURL }}
         />
         <View style={{ paddingHorizontal: 20, paddingVertical: 10, flex: 1 }}>
-          <Text style={{ fontWeight: "bold", fontSize: 16 }}>{data.title}</Text>
-          <Text style={{ color: "grey" }}>{data.members} members</Text>
+          <Text style={{ fontWeight: "bold", fontSize: 16 }}>{data.displayName.toUpperCase()}</Text>
+          <Text style={{ color: "grey" }}>{data.membersCount} members</Text>
         </View>
         <TouchableOpacity
           style={{

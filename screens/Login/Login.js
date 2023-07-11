@@ -1,19 +1,17 @@
 import { TouchableOpacity, View, Text } from "react-native";
-import { loginUser } from "../../services/appwrite/auth";
+
 import useUserStore from "../../store/user.store";
 import { useState } from "react";
 import { Button, TextInput } from "react-native-paper";
 import { Entypo } from "@expo/vector-icons";
+import { logUserIn } from "../../services/firebase/auth";
 
 const LoginScreen = () => {
   const addUser = useUserStore((state) => state.addUser);
-
   const [email, setEmail] = useState("rohank2502@gmail.com");
   const [password, setPassword] = useState("test12345");
-
   const handleLogin = async () => {
-    let response = await loginUser();
-    console.log("handleLogin", response);
+    let response = await logUserIn();
     addUser(response);
   };
 

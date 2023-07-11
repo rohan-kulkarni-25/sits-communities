@@ -14,11 +14,14 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+
+    "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.rohankulkarni25.sitscommunities"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -32,6 +35,6 @@
       "eas": {
         "projectId": "dd423155-2277-40b0-8d9c-98d1cf5ac844"
       }
-    }
+    }  
   }
 }

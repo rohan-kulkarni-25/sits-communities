@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "484744715563",
+    "project_id": "sits-communities",
+    "storage_bucket": "sits-communities.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484744715563:android:ea6a7024374e9a18db396e",
+        "android_client_info": {
+          "package_name": "com.rohankulkarni25.sitscommunities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484744715563-475ftbag5tt3inunl618cp769et0cvm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOd7dt6GqxEwWm_qFPPOoihhQ5MBN_EF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484744715563-475ftbag5tt3inunl618cp769et0cvm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

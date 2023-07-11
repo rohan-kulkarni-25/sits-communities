@@ -2,17 +2,14 @@ import { create } from "zustand";
 
 import { devtools, persist, createJSONStorage } from "zustand/middleware";
 
-const userStore = (set) => ({
-  user: {},
-  addUser: (userData) => {
-    set((state) => ({ user: userData }));
-  },
-  removeUser: () => {
-    set((state) => ({ user: {} }));
+const communitiesStore = (set) => ({
+  communities: [],
+  loadCommunities: (communitiesData) => {
+    set((state) => ({ communities: communitiesData }));
   },
 });
 
-const useUserStore = create(userStore);
+const useCommunitiesStore = create(communitiesStore);
 // devtools(
 //   persist(userStore, {
 //     name: "sits-user",
@@ -20,4 +17,4 @@ const useUserStore = create(userStore);
 //   })
 // )
 
-export default useUserStore;
+export default useCommunitiesStore;
